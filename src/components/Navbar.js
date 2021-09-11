@@ -1,11 +1,11 @@
-const Navbar = ({search, setSearch, handleSubmitRepos, handleSubmitStar}) => {
+const Navbar = ({setSearch, handleSubmitRepos, handleSubmitStar}) => {
   
   return ( 
     <>
       <form>
-        <input type="text" 
-    
-        onChange={(e)=>setSearch(e.target.value)}
+        <input 
+          type="text" 
+          onChange={(e)=>setSearch(e.target.value)}
         />
         <button onClick={handleSubmitRepos}>Repository</button>
         <button onClick={handleSubmitStar}>Starred</button>

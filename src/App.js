@@ -4,7 +4,7 @@ import Home from './page/Home'
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Home />
       </Router>
     </>

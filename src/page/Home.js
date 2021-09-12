@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import Repos from './Repos'
 import Star from './Star'
 import Search from './Search'
+import NotFound from './NotFound'
 
 
 const Home = () => {
@@ -24,8 +25,15 @@ const Home = () => {
       url: `https://api.github.com/users/${search}/repos`
     })
     .then(res => {
+      if( res.status !== 200){
+       
+       }
       setDataRepos(res.data)
       history.push('/repos')
+    })
+    .catch((err)=>{
+      console.log(err.message, 'Sorry')
+      history.push('/notfound')
     })
   }
 
@@ -59,6 +67,9 @@ const Home = () => {
           </Route>
           <Route path="/star">
             <Star dataStar={dataStar}/>
+          </Route>
+          <Route path="/*">
+            <NotFound />
           </Route>
         </Switch>
       

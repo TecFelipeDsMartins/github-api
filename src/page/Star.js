@@ -1,7 +1,8 @@
 const Star = ({dataStar}) => {
   return ( 
     <>
-      <h2>{dataStar}</h2>
+      {dataStar.map((star)=> 
+      <h2>{star.name}</h2> )}
     </>
    );
 }

@@ -2,7 +2,8 @@ const Repos = ({search, dataRepos}) => {
 
   return ( 
     <>
-      <h2>{dataRepos}</h2>
+      {dataRepos.map((repo)=> 
+      <h2>{repo.name}</h2> )}
     </>
    );
 }

@@ -1,5 +1,9 @@
+import axios from 'axios'
+
 import { useState } from 'react'
-import {BrowserRouter as Router, Route, link, Switch } from 'react-router-dom'
+import {Route, 
+        Switch, 
+        useHistory } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Repos from './Repos'
 import Star from './Star'
@@ -11,21 +15,36 @@ const Home = () => {
   const [ dataRepos, setDataRepos ] = useState('Repos')
   const [ dataStar, setDataStar ] = useState('Star')
 
+  const history = useHistory()
   
   const handleSubmitRepos = (e) => {
     e.preventDefault()
-    setDataRepos(search)
+    axios({
+      method: 'GET',
+      url: `https://api.github.com/users/${search}/repos`
+    })
+    .then(res => {
+      setDataRepos(res.data)
+      history.push('/repos')
+    })
   }
 
   const handleSubmitStar = (e) => {
     e.preventDefault()
-    setDataStar(search)
+    axios({
+      method: 'GET',
+      url: `https://api.github.com/users/${search}/starred`
+    })
+    .then(res => {
+      setDataStar(res.data)
+      history.push('/star')
+    })
   }
 
 
   return ( 
     <>
-      <Router>
+      
         <h1>Github-Api</h1>
         <Navbar search={search}
                 setSearch={setSearch}
@@ -42,7 +61,7 @@ const Home = () => {
             <Star dataStar={dataStar}/>
           </Route>
         </Switch>
-      </Router>
+      
     </>
    );
 }

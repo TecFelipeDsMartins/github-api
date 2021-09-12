@@ -11,9 +11,9 @@ import Search from './Search'
 
 
 const Home = () => {
-  const [ search, setSearch ] = useState('Ele Salva')
-  const [ dataRepos, setDataRepos ] = useState('Repos')
-  const [ dataStar, setDataStar ] = useState('Star')
+  const [ search, setSearch ] = useState('exemplo')
+  const [ dataRepos, setDataRepos ] = useState([])
+  const [ dataStar, setDataStar ] = useState([])
 
   const history = useHistory()
   

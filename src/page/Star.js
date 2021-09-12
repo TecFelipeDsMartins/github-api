@@ -2,7 +2,7 @@ const Star = ({dataStar}) => {
   return ( 
     <>
       {dataStar.map((star)=> 
-      <h2>{star.name}</h2> )}
+      <h2 key={star.id}>{star.name}</h2> )}
     </>
    );
 }

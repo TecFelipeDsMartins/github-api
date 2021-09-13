@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/github-api/static/css/main.01e48b86.chunk.css",
-    "main.js": "/github-api/static/js/main.de637635.chunk.js",
-    "main.js.map": "/github-api/static/js/main.de637635.chunk.js.map",
+    "main.css": "/github-api/static/css/main.cc80c645.chunk.css",
+    "main.js": "/github-api/static/js/main.a95a8a39.chunk.js",
+    "main.js.map": "/github-api/static/js/main.a95a8a39.chunk.js.map",
     "runtime-main.js": "/github-api/static/js/runtime-main.9ad00089.js",
     "runtime-main.js.map": "/github-api/static/js/runtime-main.9ad00089.js.map",
     "static/js/2.c51f7f89.chunk.js": "/github-api/static/js/2.c51f7f89.chunk.js",
     "static/js/2.c51f7f89.chunk.js.map": "/github-api/static/js/2.c51f7f89.chunk.js.map",
     "index.html": "/github-api/index.html",
-    "static/css/main.01e48b86.chunk.css.map": "/github-api/static/css/main.01e48b86.chunk.css.map",
+    "static/css/main.cc80c645.chunk.css.map": "/github-api/static/css/main.cc80c645.chunk.css.map",
     "static/js/2.c51f7f89.chunk.js.LICENSE.txt": "/github-api/static/js/2.c51f7f89.chunk.js.LICENSE.txt",
     "static/media/octocat.160ee7bd.gif": "/github-api/static/media/octocat.160ee7bd.gif",
     "static/media/searchoctocat.b2de1f15.png": "/github-api/static/media/searchoctocat.b2de1f15.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.9ad00089.js",
     "static/js/2.c51f7f89.chunk.js",
-    "static/css/main.01e48b86.chunk.css",
-    "static/js/main.de637635.chunk.js"
+    "static/css/main.cc80c645.chunk.css",
+    "static/js/main.a95a8a39.chunk.js"
   ]
 }

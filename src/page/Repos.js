@@ -1,14 +1,13 @@
-const Repos = ({search, dataRepos}) => {
-const styles = {
-  color: "red"
-}
+import '../page/reposStyle.css'
 
+const Repos = ({search, dataRepos}) => {
 
   return ( 
     <>
-    <div styles={styles.color}>
+    <div className="container-repos">
       {dataRepos.map((repo)=> 
-      <h2  key={repo.id}>{repo.name}</h2> )}
+      <h2  key={repo.id}>{repo.name}</h2> 
+      )}
     </div>
     </>
    );

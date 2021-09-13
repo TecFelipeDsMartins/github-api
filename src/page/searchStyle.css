@@ -1,0 +1,10 @@
+h2 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.search-octocat {
+  width: 300px;
+  opacity: 0.2;
+  border-radius: 0px 00px 15px 15px;
+}

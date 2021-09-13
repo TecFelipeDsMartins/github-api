@@ -1,0 +1,17 @@
+.container-repos {
+  overflow-y: scroll;
+  font-size: 13px;
+  height: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container-repos::-webkit-scrollbar {
+  display: none;
+}
+
+.container-repos {
+-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,6 +1,14 @@
+import '../page/searchStyle.css'
+import searchoctocat from '../assets/searchoctocat.png'
+
 const Search = () => {
   return ( 
-    <h2>Search</h2>
+    <div className="container-search">
+      <h2>Search for a github user</h2>
+      <img 
+        className="search-octocat"
+        src={searchoctocat} alt="octocat looking for" />
+    </div>
    );
 }
  

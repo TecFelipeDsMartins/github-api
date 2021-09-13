@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.container {
+  background-color: hsl(243, 100%, 89%);
+  border-radius: 20px 20px 0px 0px;
+  max-width: 400px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+header > h1 {
+  font-size: 45px;
+  font-family: Lobster;
+  font-weight: 100;
+  color: hsl(240, 100%, 99%);
+  text-shadow: 0 0 5px hsl(0, 0%, 57%) ;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > input {
+  margin: 15px
+}
+
+form > input[type=text] {
+  width: 240px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  transition: width 0.3s ease-in-out;
+}
+
+form > input[type=text]:focus {
+  width: 245px;
+}
+
+.container-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  width: 240px
+}
+
+.container-btn > button{
+  background-color: hsl(243, 100%, 89%);
+  border: 1.5px solid #fff;
+  border-bottom: none;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 14px;
+  width: 33%;
+  padding-top: 5px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.container-btn > button:active{
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container-btn > button:hover {
+  box-shadow: 0 3px 4px 2px gray;
+}
+
+

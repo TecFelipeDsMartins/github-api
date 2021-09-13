@@ -4,7 +4,8 @@ import { useState } from 'react'
 import {Route, 
         Switch, 
         useHistory } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Perfil from './Perfil'
 import Repos from './Repos'
 import Star from './Star'
 import Search from './Search'
@@ -12,11 +13,35 @@ import NotFound from './NotFound'
 
 
 const Home = () => {
-  const [ search, setSearch ] = useState('exemplo')
+  
+  const [ search, setSearch ] = useState('')
+  const [ dataPerfil, setDataPerfil ] = useState([])
   const [ dataRepos, setDataRepos ] = useState([])
   const [ dataStar, setDataStar ] = useState([])
 
+  
   const history = useHistory()
+  
+  //fetch perfil data
+  const handleSubmitPerfil = (e) => {
+    e.preventDefault()
+    axios({
+      method: 'GET',
+      url: `https://api.github.com/users/${search}`
+    })
+    .then(res => {
+      if( res.status !== 200){
+       
+       }
+      setDataPerfil(res.data)
+      history.push('/perfil')
+    })
+    .catch((err)=>{
+      console.log(err.message, 'Sorry')
+      history.push('/notfound')
+    })
+  }
+  
   
   const handleSubmitRepos = (e) => {
     e.preventDefault()
@@ -49,18 +74,23 @@ const Home = () => {
     })
   }
 
-
   return ( 
     <>
+      <Header 
+        search={search}
+        setSearch={setSearch}
+        handleSubmitPefil={handleSubmitPerfil}
+        handleSubmitRepos={handleSubmitRepos}
+        handleSubmitStar={handleSubmitStar} 
+      />
       
-        <h1>Github-Api</h1>
-        <Navbar search={search}
-                setSearch={setSearch}
-                handleSubmitRepos={handleSubmitRepos}
-                handleSubmitStar={handleSubmitStar} />
+      <section className="page-container">      
         <Switch>
           <Route exact path="/">
             <Search />
+          </Route>
+          <Route path="/perfil">
+            <Perfil dataPerfil={dataPerfil} />
           </Route>
           <Route path="/repos">
             <Repos dataRepos={dataRepos}/>
@@ -72,7 +102,7 @@ const Home = () => {
             <NotFound />
           </Route>
         </Switch>
-      
+      </section>        
     </>
    );
 }

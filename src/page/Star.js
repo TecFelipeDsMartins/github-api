@@ -1,8 +1,13 @@
 const Star = ({dataStar}) => {
   return ( 
     <>
-      {dataStar.map((star)=> 
-      <h2 key={star.id}>{star.name}</h2> )}
+      <div className="container-star">
+        <h2>Starred</h2>
+        <ul>
+          {dataStar.map((star)=> 
+          <li key={star.id}>{star.name}</li> )}
+        </ul>
+      </div>
     </>
    );
 }

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import {Route, 
         Switch, 
         useHistory } from 'react-router-dom'
+
 import Header from '../components/Header'
 import Perfil from './Perfil'
 import Repos from './Repos'
@@ -19,8 +20,8 @@ const Home = () => {
   const [ dataRepos, setDataRepos ] = useState([])
   const [ dataStar, setDataStar ] = useState([])
 
-  
   const history = useHistory()
+  
   
   //fetch perfil data
   const handleSubmitPerfil = (e) => {
@@ -30,9 +31,6 @@ const Home = () => {
       url: `https://api.github.com/users/${search}`
     })
     .then(res => {
-      if( res.status !== 200){
-       
-       }
       setDataPerfil(res.data)
       history.push('/perfil')
     })
@@ -42,7 +40,7 @@ const Home = () => {
     })
   }
   
-  
+  //Fetch repositorio data
   const handleSubmitRepos = (e) => {
     e.preventDefault()
     axios({
@@ -50,9 +48,6 @@ const Home = () => {
       url: `https://api.github.com/users/${search}/repos`
     })
     .then(res => {
-      if( res.status !== 200){
-       
-       }
       setDataRepos(res.data)
       history.push('/repos')
     })
@@ -62,6 +57,7 @@ const Home = () => {
     })
   }
 
+  //Fetch starred data
   const handleSubmitStar = (e) => {
     e.preventDefault()
     axios({
@@ -71,6 +67,10 @@ const Home = () => {
     .then(res => {
       setDataStar(res.data)
       history.push('/star')
+    })
+    .catch((err)=>{
+      console.log(err.message, 'Sorry')
+      history.push('/notfound')
     })
   }
 

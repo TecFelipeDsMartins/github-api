@@ -5,9 +5,12 @@ const Repos = ({search, dataRepos}) => {
   return ( 
     <>
     <div className="container-repos">
+      <h2>Repository</h2>
+      <ul>
       {dataRepos.map((repo)=> 
-      <h2  key={repo.id}>{repo.name}</h2> 
+      <li  key={repo.id}>{repo.name}</li> 
       )}
+      </ul>
     </div>
     </>
    );

@@ -1,0 +1,24 @@
+.container-not {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-not > h2 {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+ img {
+  width: 350px;
+  border-radius: 10%;
+}
+
+.container-not > a {
+  margin-top: 18px;
+  font-size: 20px;
+  text-decoration: none;
+}

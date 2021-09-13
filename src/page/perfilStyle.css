@@ -6,7 +6,9 @@
 }
 
 .container-perfil > h2 {
-  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 .container-perfil > img {

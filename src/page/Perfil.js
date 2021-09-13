@@ -2,7 +2,7 @@ import '../page/perfilStyle.css'
 
 const Perfil = ({dataPerfil, setDataPerfil}) => {
   return ( 
-    <div className="container-perfil">
+    <div className="container__perfil">
       <h2>Profile</h2>
       <img src={dataPerfil.avatar_url} alt="Avatar"/>
       <h3>{dataPerfil.name}</h3>

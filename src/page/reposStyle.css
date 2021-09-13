@@ -1,4 +1,4 @@
-.container-repos {
+.container__repos {
   overflow-y: scroll;
   font-size: 13px;
   height: auto;
@@ -7,16 +7,16 @@
   padding-bottom: 20px;
 }
 
-.container-repos::-webkit-scrollbar {
+.container__repos::-webkit-scrollbar {
   display: none;
 }
 
-.container-repos {
+.container__repos {
 -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
-.container-repos > h2 {
+.container__repos > h2 {
   color: rgb(255, 255, 255);
   font-weight: 400;
   margin-bottom: 15px;

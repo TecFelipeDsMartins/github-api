@@ -3,7 +3,7 @@ import searchoctocat from '../assets/searchoctocat.png'
 
 const Search = () => {
   return ( 
-    <div className="container-search">
+    <div className="container__search">
       <img className="search-octocat"
            src={searchoctocat} 
            alt="octocat looking for"/>

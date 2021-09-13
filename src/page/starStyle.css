@@ -1,4 +1,4 @@
-.container-star {
+.container__star {
   overflow-y: scroll;
   font-size: 13px;
   height: auto;
@@ -7,16 +7,16 @@
   padding-bottom: 20px;
 }
 
-.container-star::-webkit-scrollbar {
+.container__star::-webkit-scrollbar {
   display: none;
 }
 
-.container-star {
+.container__star {
 -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
-.container-star > h2 {
+.container__star > h2 {
   color: rgb(255, 255, 255);
   font-weight: 400;
   margin-bottom: 15px;

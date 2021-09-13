@@ -4,7 +4,7 @@ const Repos = ({search, dataRepos}) => {
 
   return ( 
     <>
-    <div className="container-repos">
+    <div className="container__repos">
       <h2>Repository</h2>
       <ul>
       {dataRepos.map((repo)=> 

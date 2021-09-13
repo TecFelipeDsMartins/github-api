@@ -84,7 +84,7 @@ const Home = () => {
         handleSubmitStar={handleSubmitStar} 
       />
       
-      <section className="page-container">      
+      <section className="container__page">      
         <Switch>
           <Route exact path="/">
             <Search />

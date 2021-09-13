@@ -1,7 +1,7 @@
 const Star = ({dataStar}) => {
   return ( 
     <>
-      <div className="container-star">
+      <div className="container__star">
         <h2>Starred</h2>
         <ul>
           {dataStar.map((star)=> 
